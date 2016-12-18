@@ -1,0 +1,9 @@
+*.java
+*.class
+*.dex
+*.txt
+*.pyc
+.idea/
+*.so
+*.o
+*.out
