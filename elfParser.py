@@ -676,7 +676,7 @@ class ELF(object):
         print 'e_shoff:\t%s\t//Section header offset' % hex(self.elf32_Ehdr.e_shoff)
         print 'e_flags:\t%s' % self.elf32_Ehdr.e_flags
         print 'e_ehsize:\t%s\t//ELF header size' % self.elf32_Ehdr.e_ehsize
-        print 'e_phentsize:\t%s\t//POrogram header entry size' % self.elf32_Ehdr.e_phentsize
+        print 'e_phentsize:\t%s\t//Program header entry size' % self.elf32_Ehdr.e_phentsize
         print 'e_phnum:\t%s\t//Program header number' % self.elf32_Ehdr.e_phnum
         print 'e_shentsize:\t%s\t//Section header entry size' % self.elf32_Ehdr.e_shentsize
         print 'e_shnum:\t%s\t//Section header number' % self.elf32_Ehdr.e_shnum
@@ -711,7 +711,7 @@ class ELF(object):
         return None
 
 if __name__ == '__main__':
-    elf = ELF("libhello-jni.so")
+    elf = ELF(sys.argv[1])
     elf.displayELFHeader()
     elf.displaySectionHeader()
     elf.displayProgramHeader()
